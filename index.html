@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Initiation au vietnamien</title>
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+<header class="bar">
+  <button id="menuBtn" class="ghost" aria-label="Historique des leçons">☰</button>
+  <strong class="brand">Tiếng Việt</strong>
+  <div class="player">
+    <audio id="audio" controls preload="auto"></audio>
+    <label>Vitesse
+      <select id="speed">
+        <option value="0.5">0.5×</option>
+        <option value="0.75">0.75×</option>
+        <option value="1" selected>1×</option>
+        <option value="1.25">1.25×</option>
+      </select>
+    </label>
+    <button id="playAll" class="ghost">▶ Tout lire</button>
+    <label class="chk"><input type="checkbox" id="edit"> Calage</label>
+  </div>
+</header>
+
+<div class="layout">
+  <aside id="menu">
+    <h2>Historique</h2>
+    <ul id="lessonList"></ul>
+  </aside>
+
+  <main>
+    <div id="error" hidden></div>
+    <article id="lesson" class="paper"></article>
+
+    <section id="editor" hidden>
+      <h3>Calage : <span id="edLabel">—</span></h3>
+      <div class="row">
+        <label>Début (s) <input type="number" id="edStart" step="0.01" min="0"></label>
+        <button id="setStart" class="ghost">⏱ = lecteur</button>
+        <label>Fin (s) <input type="number" id="edEnd" step="0.01" min="0"></label>
+        <button id="setEnd" class="ghost">⏱ = lecteur</button>
+        <button id="testSeg" class="ghost">▶ Tester</button>
+        <button id="copyJson">Copier la leçon</button>
+      </div>
+    </section>
+  </main>
+</div>
+<script src="data/manifest.js"></script>
+<script src="app.js"></script>
+</body>
+</html>
