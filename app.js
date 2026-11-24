@@ -64,13 +64,30 @@ async function loadLesson(id) {
 const attrs = o => (o && o.start != null)
   ? (items.push(o), ` data-i="${items.length - 1}" tabindex="0" title="Écouter"`) : "";
 
+function renderText(s) {
+  if (!s) return "";
+  let out = "", inList = false;
+  for (const line of s.split(/\r?\n/)) {
+    const m = line.match(/^\s*-\s+(.*)/);
+    if (m) {
+      if (!inList) { out += '<ul class="txt">'; inList = true; }
+      out += `<li>${rich(m[1])}</li>`;
+    } else {
+      if (inList) { out += "</ul>"; inList = false; }
+      if (line.trim()) out += `<p class="txt">${rich(line)}</p>`;
+    }
+  }
+  if (inList) out += "</ul>";
+  return out;
+}
+
 function render() {
   let html = `${lesson.category ? `<div class="tab">${esc(lesson.category)}</div>` : ""}
     <div class="head"${attrs(lesson.head)}><div class="num">${esc(lesson.number)}</div>
     <div><h1>${refs(lesson.title)}</h1><p>${refs(lesson.subtitle)}</p></div></div>`;
   for (const b of lesson.blocks) {
     if (b.type === "section") {
-      html += `<h2 class="sec"${attrs(b)}>${rich(b.title)}</h2>${b.text ? `<p class="txt">${rich(b.text)}</p>` : ""}`;
+      html += `<h2 class="sec"${attrs(b)}>${rich(b.title)}</h2>${renderText(b.text)}`;
     } else if (b.type === "table") {
       html += "<table><tbody>";
       for (const g of b.groups) g.rows.forEach((r, i) => {
