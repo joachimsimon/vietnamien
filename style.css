@@ -42,7 +42,7 @@ aside button[aria-current=true]{border-color:var(--accent);box-shadow:inset 3px 
 .ref{font-size:.55em;font-weight:400;vertical-align:baseline;position:relative;top:-.4em}
 h2.sec{font-size:1.15rem;margin:26px 0 4px}
 h2.sec::before{content:"■";font-size:.7em;color:var(--mute);margin-right:8px}
-p.txt{margin:0 0 14px;color:var(--ink)}
+p.txt{margin:0 0 14px;color:var(--ink);white-space:pre-line}
 table{width:100%;border-collapse:collapse;margin:6px 0 10px}
 td{padding:10px 12px;vertical-align:middle}
 td.fr{font-style:italic;border-left:1.5px solid var(--line);color:var(--mute)}
