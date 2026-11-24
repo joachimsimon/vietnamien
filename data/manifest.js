@@ -2,6 +2,21 @@ window.VI = window.VI || { data: {}, register(l) { VI.data[l.id] = l; } };
 // Une ligne par leçon : ajoutez la nouvelle leçon en tête de liste.
 VI.manifest = [ 
 {
+    "id": "05",
+    "number": 5,
+    "title": "Nghề nghiệp",
+    "subtitle": "Métier",
+    "date": "2026-11-24",
+    "file": "data/lesson-05.js"      
+    },
+{
+    "id": "04",
+    "number": 4,
+    "title": "Số đếm và đếm",
+    "date": "2026-11-24",
+    "file": "data/lesson-04.js"      
+    },
+{
     "id": "03",
     "number": 3,
     "title": "Gia đình",
