@@ -311,6 +311,28 @@ VI.register({
           ]
         }
       ]
-    }
-  ]
+    },
+{
+  "type": "section",
+  "title": "Quelques exceptions",
+  "text": `- À partir de 15 (25, 35, 45, etc.), « năm » devient « lăm ».
+- À partir de 21 (31, 41, 51, etc.), « một » s'écrit et se prononce « mốt ».
+- À partir de 24 (34, 44, 54, etc.), « bốn » est interchangeable avec « tư ».
+- À partir de 20 (30, 40, 50, etc.), « mười » s'écrit et se prononce « mươi ».
+- 20 (30, 40, 50, etc.) peuvent être dits « hai mươi » ou « hai chục ».
+- « Mươi » n'est pas obligatoire et est fréquemment omis à l'oral spontané dans les chiffres dont le rang de l'unité n'est pas zéro (ex. 24, 36, 99, etc.).
+- « Nghìn » et « ngàn » sont deux variantes phonétiques.
+- Selon l'ancien système, 10.000 se dit aussi « một vạn » ou « mười nghìn », 100.000 « mười vạn » ou « một trăm nghìn ».`
+}, 
+
+{
+  "type": "section",
+  "title": "Quelques expressions idiomatiques",
+  "text": `-  Từ hai bàn tay trắng: à partir de zéro (lit. Les mains blanches)
+- Năm lần bảy lượt: à maintes reprises, de manière répétitive (et souvent sans réussir à obtenir les résultats souhaités)
+- Mồm năm miệng mười: se dit des personnes qui parlent beaucoup et sans cesse, sans laisser les autres prendre la parole
+- Trăm công nghìn việc: se dit des personnes qui sont très occupées, qui ont mille choses à accomplir ».`
+}
+
+]
 });
